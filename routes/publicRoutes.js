@@ -44,6 +44,36 @@ r.get('/logout', async (ctx) => {
 })
 
 
+r.get('/add-user', async (ctx) => {
+  let props = {...ctx.props}
+  ctx.body = render('page-public', props)
+})
+
+r.post('/save-user', async (ctx) => {
+  let props = {...ctx.props}
+
+  if (props.body.username && props.body.password) {
+    let hash = bcrypt.hashSync(props.body.password, 10)
+    let saved = (await db.save(UserModel, {
+      username: props.body.username,
+      password: hash
+    })).result
+    if (saved.errmsg) {
+      console.log(saved.code)
+      props.session.flash = {
+        newUserError: saved.code === 11000 ? 'User already exists' : null || saved.errmsg
+      }
+    } else {
+      props.session.flash = {
+        newUserOk: "New user was added"
+      }
+    }
+  }
+
+  ctx.redirect('/add-user')
+})
+
+
 async function hasSession(ctx, next) {
   if (ctx.session.user) {
     return ctx.redirect('/member')

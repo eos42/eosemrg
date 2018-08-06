@@ -23,6 +23,12 @@
       {{#eq path "/"}}
         {{> login-form}}
       {{/eq}}
+
+      {{#eq path "/add-user"}}
+        <div class="col-12">
+          {{> add-user-form}}
+        </div>
+      {{/eq}}
     </div>
   </div>
 </div>
