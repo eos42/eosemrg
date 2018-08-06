@@ -20,3 +20,12 @@ apply_www_permissions(){
 
 create_www_dir
 apply_www_permissions
+
+
+
+
+
+# Start Supervisor 
+echo "Starting Supervisor"
+/usr/bin/supervisord -n -c /etc/supervisord.conf
+
