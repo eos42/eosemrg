@@ -1,0 +1,25 @@
+<form action="/member/send-sms" method="POST" class="send-sms-form">
+  <div class="card">
+    <div class="card-body">
+      <div class="form-group">
+        <div class="form-title">
+          Send SMS to producers
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="hidden" name="sending" value="1">
+        <button class="btn btn-warning btn-lg" onclick="return confirm('Continue?')">
+          Send
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<style>
+  .send-sms-form {
+    max-width: 350px;
+    margin: 50px auto 0;
+    text-align: center;
+  }
+</style>

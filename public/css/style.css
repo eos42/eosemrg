@@ -1,0 +1,35 @@
+body {
+  background-color: #f1f1f1;
+  color: #565656;
+}
+
+.btn {
+  text-transform: uppercase;
+}
+
+a,
+a:hover,
+a:active,
+a:focus,
+.btn-link,
+.btn-link:hover,
+.btn-link:active,
+.btn-link:focus {
+  color: #565656;
+}
+
+form .form-group:last-of-type {
+  margin-bottom: 0;
+}
+
+.card {
+  border-radius: 3px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.2), 0 5px 30px rgba(0,0,0,.1);
+  background-color: #fbfbfb;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+}

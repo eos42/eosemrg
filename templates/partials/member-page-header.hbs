@@ -1,0 +1,41 @@
+<div class="member-page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="member-page-header-inner">
+          <div class="member-page-header-links float-right">
+            <a class="btn btn-sm btn-link member-page-header-logout-btn" href="/member">
+              <i class="fas fa-envelope"></i> SMS
+            </a>
+            {{#eq session.user.username '11111'}}
+              <a class="btn btn-sm btn-link member-page-header-logout-btn" href="/member/add-user">
+                <i class="fas fa-user-plus"></i> Add user
+              </a>
+            {{/eq}}
+            <a class="btn btn-sm btn-link member-page-header-logout-btn" href="/logout">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+          </div>
+          EOS Emergency
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .member-page-header {
+    background-color: #fbfbfb;
+    box-shadow: 0 3px 5px rgba(0,0,0,.1);
+    margin-bottom: 20px;
+  }
+  .member-page-header-inner {
+    padding: 20px 0;
+  }
+  .member-page-header-links {
+    margin-top: -3px;
+  }
+  .member-page-header-links .btn {
+    margin-left: 15px;
+  }
+</style>

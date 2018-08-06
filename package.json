@@ -1,0 +1,35 @@
+{
+  "name": "eos-emergency",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "config": {
+    "port": 3000,
+    "dbUrl": "mongodb://localhost:27017/eosemergency"
+  },
+  "scripts": {
+    "start": "node ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "emergency-send": "nodenv emergency-send.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "dotenv": "^6.0.0",
+    "fs-extra": "^7.0.0",
+    "handlebars": "^4.0.11",
+    "handlebars-helpers": "^0.10.0",
+    "klaw": "^3.0.0",
+    "koa": "^2.5.2",
+    "koa-body": "^4.0.4",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.8.2",
+    "koa-static": "^5.0.0",
+    "mongoose": "^5.2.6",
+    "node-env-run": "^3.0.2",
+    "request-promise": "^4.2.2",
+    "twilio": "^3.18.0"
+  }
+}

@@ -1,0 +1,39 @@
+<form action="/member/save-user" method="POST" class="add-user-form">
+  <div class="card">
+    <div class="card-body">
+      <div class="form-group">
+        <div class="form-title">
+          Add new user
+        </div>
+      </div>
+      {{#if session.flash.newUserOk}}
+        <div class="alert alert-success" role="alert">
+          <i class="fas fa-check"></i> {{session.flash.newUserOk}}
+        </div>
+      {{/if}}
+      {{#if session.flash.newUserError}}
+        <div class="alert alert-danger" role="alert">
+          <i class="fas fa-times"></i> {{session.flash.newUserError}}
+        </div>
+      {{/if}}
+      <div class="form-group">
+        <input class="form-control" type="text" name="username" placeholder="Username" required>
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="password" name="password" placeholder="Password" autocomplete="new-password" required>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success btn-block">
+          <i class="fas fa-plus"></i> Add
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<style>
+  .add-user-form {
+    max-width: 350px;
+    margin: 50px auto 0;
+  }
+</style>
